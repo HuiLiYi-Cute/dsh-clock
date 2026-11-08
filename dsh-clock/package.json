@@ -1,0 +1,29 @@
+{
+  "name": "dsh-clock",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A small draggable floating clock for DeepSeek Harness: current time, count-up, countdown and alarm (only one runs at a time); collapses into a pill and alternates time/task; customisable panel colour.",
+  "keywords": ["dsh", "dsh-plugin", "cordis-plugin", "clock", "timer", "alarm", "widget"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuiLiYi-Cute/dsh-clock.git"
+  },
+  "homepage": "https://github.com/HuiLiYi-Cute/dsh-clock#readme",
+  "bugs": "https://github.com/HuiLiYi-Cute/dsh-clock/issues",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md", "LICENSE"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

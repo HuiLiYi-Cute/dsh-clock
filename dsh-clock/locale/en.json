@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Floating clock",
+    "description": "A small draggable clock on the page: current time, count-up, countdown, and alarm (only one runs at a time). It collapses into a pill when untouched and alternates between the time and the running task."
+  }
+}
